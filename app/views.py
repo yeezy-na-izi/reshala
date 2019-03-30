@@ -16,7 +16,7 @@ def home():
 def kurav():
     form = forms.Kurav()
     if form.validate_on_submit():
-        az = float(form.a.data)
+        az =float(form.a.data)
         bz = float(form.b.data)
         cz = float(form.c.data)
         if bz == 0 and cz == 0:
@@ -174,3 +174,4 @@ def pltriagle():
                 plt.show()
 
     return render_template('pltriagle.html', form=form)
+

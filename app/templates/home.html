@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Абсолютное позиционирование</title>
+    <style type="text/css">
+   body { margin: 0; }
+   #algebra, #content, #header, #photo, #geometric   { position: absolute; }
+   #algebra, #content, #header, #photo, #geometric { overflow: auto; padding: 10px; }
+   #header {
+    top: 0px;
+    left: 640px;
+   }
+   #algebra {
+    width: 300px;
+    left: 200px;
+    top: 102px;
+    bottom: 0;
+   }
+   #content {
+    top: 82px;
+    left: 360px;
+    bottom: 0; right: 0;
+    }
+    #geometric {
+    width: 300px;
+    left: 1080px;
+    top: 102px;
+    bottom: 0;
+    }
+<style>
+   @font-face {
+    font-family: Pompadur;
+    src: url(app/static/Amatic_SC/AmaticSC-Bold.ttf);
+   }
+   h1 {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+   p {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+   br {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+
+
+
+    </style>
+</head>
+<body>
+<div>
+    <p><img src="static/backend.jpg"></p>
+</div>
+<h1>
+    <div id="header">
+        <p>Решала</p>
+    </div>
+</h1>
+<div id="algebra">
+    <h1>
+        <a>Algebra:</a>
+        <a href="/kvadraturav">Квадратные Уравнения</a>
+    </h1>
+</div>
+<div id="geometric">
+    <h1>
+        <a>Geometric:</a>
+        <a>Triagle:</a>
+        <a href="/right_triangle">Прямоугольный треугольник</a>
+        <a href="/pltriagle">Треугольник на плоскости</a>
+    </h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Абсолютное позиционирование</title>
+    <style type="text/css">
+   body { margin: 0; }
+   #algebra, #content { position: absolute; }
+   #algebra, #content { overflow: auto; padding: 10px; }
+   #header {
+    height: 80px;
+    background: #AFEEEE; border-bottom: 1px solid #7B5427;
+   }
+   #header h1 { padding: 20px; margin: 0; }
+   #algebra {
+    width: 340px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 102px;
+    bottom: 0;
+   }
+   #content {
+    top: 82px;
+    left: 360px;
+    bottom: 0; right: 0;
+   }
+   #geometric{
+   left: 300px
+    width: 300px; background: #ECF5E4; border-left: 1px solid #231F20;
+    top: 82px;
+    bottom: 0;
+   }
+<style>
+   @font-face {
+    font-family: Pompadur; /* Гарнитура шрифта */
+    src: url(app/static/Amatic_SC/AmaticSC-Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+   h1 {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+   p {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+   br {
+    font-family: Pompadur, 'Comic Sans MS', cursive;
+   }
+
+
+    </style>
+</head>
+<body>
+<form action="" method="post" name="pltriagle">
+    {{form.hidden_tag()}}
+    <p>
+        Введи координаты точек A,B,C<br>
+        A<br>
+        {{form.a(size=40)}}<br>
+        B<br>
+        {{form.b(size=40)}}<br>
+        C<br>
+        {{form.c(size=40)}}<br>
+        D<br>
+        {{form.d(size=40)}}<br>
+    </p>
+    <p><input type="submit" value="Значения введены"></p>
+    <div><a href="/geometric">Назад</a></div>
+    <div><a href="/home">Home</a></div>
+</form>
+{%with messages = get_flashed_messages() %}
+{% if messages%}
+<u1>
+    {% for message in messages%}
+    <li>{{message}}</li>
+    {% endfor%}
+</u1>
+{%endif%}
+{%endwith%}
+
+</body>
+</html>

@@ -174,15 +174,3 @@ def pltriagle():
                 plt.show()
 
     return render_template('pltriagle.html', form=form)
-
-
-@app.route('/test')
-def test():
-    return render_template('test.html')
-
-
-@app.route('/test2')
-def test2():
-    return render_template('test2.html')
-
-

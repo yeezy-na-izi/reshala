@@ -22,7 +22,9 @@ def kurav():
         if bz == 0 and cz == 0:
             flash('x = 0')
         else:
-            if az == 0:
+            if az == 0 and bz == 0:
+                flash('Это не уравнение')
+            elif az == 0:
                 x = cz / bz
                 flash('Это не квадратное уравнение, но '
                       'x = ' + str(x))

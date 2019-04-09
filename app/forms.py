@@ -1,24 +1,24 @@
 from flask_wtf import Form
-from wtforms import StringField, FloatField
-from wtforms.validators import DataRequired
+from wtforms import FloatField
+from wtforms.validators import DataRequired, InputRequired
 
 
 class Kurav(Form):
-    a = FloatField(validators=[DataRequired()])
-    b = FloatField(validators=[DataRequired()])
-    c = FloatField(validators=[DataRequired()])
+    a = FloatField(validators=[InputRequired()])
+    b = FloatField(validators=[InputRequired()])
+    c = FloatField(validators=[InputRequired()])
 
 
 class Treagle_on_ploskost(Form):
-    ax = FloatField(validators=[DataRequired()])
-    ay = FloatField(validators=[DataRequired()])
-    bx = FloatField(validators=[DataRequired()])
-    by = FloatField(validators=[DataRequired()])
-    cx = FloatField(validators=[DataRequired()])
-    cy = FloatField(validators=[DataRequired()])
+    ax = FloatField(validators=[InputRequired()])
+    ay = FloatField(validators=[InputRequired()])
+    bx = FloatField(validators=[InputRequired()])
+    by = FloatField(validators=[InputRequired()])
+    cx = FloatField(validators=[InputRequired()])
+    cy = FloatField(validators=[InputRequired()])
 
 class Trapecia(Form):
-    osn1 = FloatField(validators=[DataRequired()])
-    osn2 = FloatField(validators=[DataRequired()])
-    reb1 = FloatField(validators=[DataRequired()])
-    reb2 = FloatField(validators=[DataRequired()])
+    osn1 = FloatField(validators=[InputRequired()])
+    osn2 = FloatField(validators=[InputRequired()])
+    reb1 = FloatField(validators=[InputRequired()])
+    reb2 = FloatField(validators=[InputRequired()])

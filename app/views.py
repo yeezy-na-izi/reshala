@@ -176,4 +176,3 @@ def pltriagle():
                 plt.show()
 
     return render_template('pltriagle.html', form=form)
-

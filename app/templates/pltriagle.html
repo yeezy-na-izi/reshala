@@ -1,96 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Абсолютное позиционирование</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137391127-1"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-137391127-1');
-
-    </script>
-
-    <style type="text/css">
-
-   body { margin: 0; }
-   #algebra, #content, #header, #photo, #geometric   { position: absolute; }
-   #algebra, #content, #header, #photo, #geometric { overflow: auto; padding: 10px; }
-   #header {
-    top: 0px;
-    left: 640px;
-   }
-   #algebra {
-    width: 300px;
-    left: 200px;
-    top: 102px;
-    bottom: 0;
-   }
-   #content {
-    width: 580px;
-    top: 82px;
-    left: 480px;
-    bottom: 0; right: 0;
-    }
-    #photo {
-    width: 1180px;
-    top: -200px
-    left: 200px
-    bottom: 0;
-    }
-    #geometric {
-    width: 300px;
-    left: 1080px;
-    top: 102px;
-    bottom: 0;
-    }
-<style>
-   @font-face {
-    font-family: Pompadur;
-    src: url(app/static/Amatic_SC/AmaticSC-Bold.ttf);
-   }
-   h1 {
-    font-family: Pompadur, 'Comic Sans MS', cursive;
-   }
-   p {
-    font-family: Pompadur, 'Comic Sans MS', cursive;
-   }
-   br {
-    font-family: Pompadur, 'Comic Sans MS', cursive;
-   }
-
-
-
-
-    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-<div>
-    <p><img src="static/backend.jpg"></p>
-</div>
-<h1>
-    <div id="header">
-        <p>Решала</p>
-    </div>
-</h1>
-<div id="algebra">
-    <h1>
-        <a>Algebra:</a>
-        <a href="/kvadraturav">Квадратные Уравнения</a>
-    </h1>
-</div>
-<div id="geometric">
-    <h1>
-        <a>Geometric:</a>
-        <a>Triagle:</a>
-        <a href="/right_triangle">Прямоугольный треугольник</a>
-        <a href="/pltriagle">Треугольник на плоскости</a>
-    </h1>
-</div>
+{% extends "home.html" %}
+
+
+{% block content %}
 <div id="content">
-    <form action="" method="post" name="pltriagle">
+    <form action="" method="post" name="Kurav">
         {{form.hidden_tag()}}
         <p>
             Пoжалуйста введи координаты точек A,B,C<br>
@@ -115,7 +35,7 @@
     </u1>
     {%endif%}
     {%endwith%}
-
 </div>
+{% endblock %}
 </body>
 </html>
